@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Roles on Instagram</title>
+    <link rel="stylesheet" href="job.css">
+</head>
+<body>
+<h1>Social media supporting system</h1> 
+
+    <div id="content" class="container">
+        <!-- JavaScript will populate content here -->
+    </div>
+
+    <script>
+        // Function to create and append HTML elements with provided text
+        function generateContent() {
+            const container = document.getElementById('content');
+
+            // Create and populate job role descriptions
+            const jobRoles = [
+                {
+                    title: 'Content Creator/Influencer:',
+                    description: 'Content creators leverage Instagram to produce and share engaging photos, videos, and other media with their audience. Influencers, in particular, build a following and collaborate with brands to promote products or services to their audience. They may specialize in niches such as fashion, travel, food, fitness, beauty, lifestyle, and more.'
+                },
+                {
+                    title: 'Social Media Manager:',
+                    description: 'Social media managers are responsible for managing and growing a brand\'s presence on Instagram and other social media platforms. They develop content strategies, create and schedule posts, engage with the audience, analyze performance metrics, and collaborate with other teams to align social media efforts with overall marketing objectives.'
+                },
+                {
+                    title: 'Digital Marketer:',
+                    description: 'Digital marketers utilize Instagram as part of their broader digital marketing strategies. They may run advertising campaigns, create sponsored content partnerships with influencers, analyze audience insights, and optimize campaigns to drive engagement, conversions, and brand awareness.'
+                },
+                {
+                    title: 'Community Manager:',
+                    description: 'Community managers focus on building and nurturing online communities around a brand or organization on Instagram. They engage with followers, respond to comments and messages, moderate discussions, and foster a positive and interactive community environment.'
+                },
+                {
+                    title: 'Graphic Designer/Photographer/Videographer:',
+                    description: 'Professionals in these creative roles may create visual content specifically for Instagram, including graphics, photographs, and videos. They collaborate with content creators, social media managers, and marketing teams to produce high-quality visuals that align with brand aesthetics and messaging.'
+                },
+                {
+                    title: 'Data Analyst/Insights Specialist:',
+                    description: 'Data analysts and insights specialists analyze Instagram metrics and audience data to track performance, identify trends, and inform strategic decisions. They use analytics tools to measure key performance indicators (KPIs), such as reach, engagement, impressions, and conversion rates, and provide actionable insights to optimize content and campaigns.'
+                },
+                {
+                    title: 'Product Manager/Developer:',
+                    description: 'Within Meta Platforms, Inc. (formerly Facebook, Inc.), there are roles related to product management and development specific to Instagram. Product managers oversee the development of new features and improvements to the Instagram platform, while developers work on coding and engineering tasks to implement these changes.'
+                },
+                {
+                    title: 'Marketing and Communications Specialist:',
+                    description: 'Marketing and communications specialists develop and execute marketing campaigns, create promotional materials, and manage public relations efforts related to Instagram. They may work for brands, agencies, or organizations seeking to leverage Instagram as part of their marketing and communications strategies.'
+                }
+            ];
+
+            // Generate HTML for each job role
+            jobRoles.forEach(role => {
+                const roleDiv = document.createElement('div');
+                const title = document.createElement('h2');
+                const description = document.createElement('p');
+
+                title.textContent = role.title;
+                description.textContent = role.description;
+
+                roleDiv.appendChild(title);
+                roleDiv.appendChild(description);
+                container.appendChild(roleDiv);
+            });
+        }
+
+        // Call the function to generate content when the page loads
+        window.onload = generateContent;
+    </script>
+</body>
+</html>
